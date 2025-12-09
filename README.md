@@ -27,6 +27,42 @@ Este projeto classifica o nível de um herói baseado na sua experiência (XP).
 | Imortal | 9.001 - 10.000 |
 | Radiante | 10.001 ou mais |
 
+## Como usar
+
+### Execução básica
+```bash
+# Execução direta
+node index.js
+
+# Ou usando npm
+npm start
+```
+
+### Testando com diferentes valores
+
+Edite as variáveis no arquivo `index.js`:
+```javascript
+let nomeDoHeroi = "SeuHeroi";
+let experienciaDoHeroi = 5500;  // Altere este valor
+```
+
+### Teste rápido via terminal
+```bash
+node -e "
+function classificarNivel(xp) {
+    if (xp < 1000) return 'Ferro';
+    else if (xp <= 2000) return 'Bronze';
+    else if (xp <= 5000) return 'Prata';
+    else if (xp <= 7000) return 'Ouro';
+    else if (xp <= 8000) return 'Platina';
+    else if (xp <= 9000) return 'Ascendente';
+    else if (xp <= 10000) return 'Imortal';
+    else return 'Radiante';
+}
+console.log('Teste XP 2500:', classificarNivel(2500));
+"
+```
+
 ## Saída
 
 O programa exibe: "O Herói de nome {nome} está no nível de {nivel}"
